@@ -8,9 +8,7 @@ fetch('https://api.github.com/users/RomanMatvichuk/repos')
         var htmlLines = "";
 
         for (let i = 0; i < myJson.length; i++) {
-            htmlLines += "<li><a href='" + myJson[i].html_url + "'>" + myJson[i].name + "</a></li>";
-            //htmlLines += "<p><strong>Ålder:</strong> " + myJson[i].age + "<br/>";
-            //htmlLines += "<strong>e-post:</strong> " + myJson[i].email + "<br/><br/></p></li>";
+            htmlLines += "<li><a class=w3-hover-text-blue href='" + myJson[i].html_url + "'>" + myJson[i].name + "</a></li>";
         }
 
         document.getElementById("repos").innerHTML = htmlLines;
